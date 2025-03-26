@@ -39,8 +39,8 @@
                 
                 // Get MedicationRequests for the selected patient
                 client.request("/MedicationRequest?patient=" + client.patient.id, {
-                    resolveReferences: [ "medicationReference" ],
-                    graph: true
+                    resolveReferences: [ "medicationReference" ],  // this line brings back info about each medication as well as the references
+                    graph: true // formats the response in a particular way
                 })
                 
                 // Reject if no MedicationRequests are found
